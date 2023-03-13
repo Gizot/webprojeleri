@@ -4,32 +4,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login Sayfası</title>
+<title>Bu bir web Login çalışmasıdır..</title>
 </head>
 <body>
-<h2>Login:</h2>
+<h2>Login : </h2>
+
 <form method="post">
-<label for="kullaniciAdi">Kullanıcı Adı :</label>
+<label for="kullaniciAdi">Kullanıcı Adı : </label>
 <input type="text" id="kullaniciAdi"
 name="kullaniciAdi"> <br> <br>
-<label for="sifre">Şifre :</label>
+
+<label for="sifre">Şifre :  </label>
 <input type="password" id="sifre"
 name="sifre"> <br> <br>
 
-
-<button type="submit" name="submit">Sunucuya Gönder</button> 
-<button type="reset">Temizle</button>
+<button type="submit" name="submit">Sunucuya Gönder</button>
+<button type="reset" name="reset">Temizle</button>
 
 </form>
-<% //bu kısma yazılan kodlar server kısmında çalışan java kodları
-//browser tarafında java çalışmaz sadece js çalışır.
+
+<%
+
 
 String userName = request.getParameter("kullaniciAdi");
 System.out.println(userName);
 
-String password =  request.getParameter("sifre");
+String password=request.getParameter("sifre");
 System.out.println(password);
- %>
+
+
+%>
 
 </body>
 </html>

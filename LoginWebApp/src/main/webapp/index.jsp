@@ -21,14 +21,19 @@ name="sifre"> <br> <br>
 <button type="reset">Temizle</button>
 
 </form>
-<% //bu kısma yazılan kodlar server kısmında çalışan java kodları
+
+<% 
+
+//bu kısma yazılan kodlar server kısmında çalışan java kodları
 //browser tarafında java çalışmaz sadece js çalışır.
 
 String userName = request.getParameter("kullaniciAdi");
-System.out.println(userName);
-
 String password =  request.getParameter("sifre");
-System.out.println(password);
+
+Kullanici k = new Kullanici(userName,password);
+
+System.out.println(k);
+
  %>
 
 </body>
